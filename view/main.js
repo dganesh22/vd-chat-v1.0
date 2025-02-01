@@ -7,15 +7,15 @@ OtherUsername = "";
 chat.hidden = false;
 myVideo.muted = true;
 
-window.onload = () => {
-    $(document).ready(function() {
-        $("#getCodeModal").modal("show");
-    });
-};
+// window.onload = () => {
+//     $(document).ready(function() {
+//         $("#getCodeModal").modal("show");
+//     });
+// };
 
 var peer = new Peer(undefined, {
     path: "/peerjs",
-    host: "/",
+    host: "https://vd-chat-v1-0.onrender.com",
     port: "4040",
 });
 
@@ -117,7 +117,7 @@ const cancel = () => {
 
 const copy = async() => {
     const roomid = document.getElementById("roomid").innerText;
-    await navigator.clipboard.writeText("http://localhost:4040/join/" + roomid);
+    await navigator.clipboard.writeText("https://vd-chat-v1-0.onrender.com/join/" + roomid);
 };
 const invitebox = () => {
     $("#getCodeModal").modal("show");
