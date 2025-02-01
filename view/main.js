@@ -14,9 +14,9 @@ myVideo.muted = true;
 // };
 
 var peer = new Peer(undefined, {
-    path: "https://vd-chat-v1-0.onrender.com/peerjs",
-    host: "localhost" || "https://vd-chat-v1-0.onrender.com",
-    port: "4040" || "",
+    path: "/peerjs",
+    host: "localhost",
+    port: "4040",
 });
 
 let myVideoStream;
@@ -111,9 +111,9 @@ const connectToNewUser = (userId, streams, myname) => {
     peers[userId] = call;
 };
 
-const cancel = () => {
-    $("#getCodeModal").modal("hide");
-};
+// const cancel = () => {
+//     $("#getCodeModal").modal("hide");
+// };
 
 const copy = async() => {
     const roomid = document.getElementById("roomid").innerText;
