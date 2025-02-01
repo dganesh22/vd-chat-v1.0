@@ -15,8 +15,8 @@ myVideo.muted = true;
 
 var peer = new Peer(undefined, {
     path: "/peerjs",
-    host: "localhost",
-    port: "4040",
+    host: "localhost" || "https://vd-chat-v1-0.onrender.com",
+    port: "4040" || "",
 });
 
 let myVideoStream;
@@ -119,9 +119,9 @@ const copy = async() => {
     const roomid = document.getElementById("roomid").innerText;
     await navigator.clipboard.writeText("https://vd-chat-v1-0.onrender.com/join/" + roomid);
 };
-const invitebox = () => {
-    $("#getCodeModal").modal("show");
-};
+// const invitebox = () => {
+//     $("#getCodeModal").modal("show");
+// };
 
 const muteUnmute = () => {
     const enabled = myVideoStream.getAudioTracks()[0].enabled;
@@ -146,13 +146,13 @@ const VideomuteUnmute = () => {
     }
 };
 
-const showchat = () => {
-    if (chat.hidden == false) {
-        chat.hidden = true;
-    } else {
-        chat.hidden = false;
-    }
-};
+// const showchat = () => {
+//     if (chat.hidden == false) {
+//         chat.hidden = true;
+//     } else {
+//         chat.hidden = false;
+//     }
+// };
 
 const addVideoStream = (videoEl, stream, name) => {
     videoEl.srcObject = stream;
