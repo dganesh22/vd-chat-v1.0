@@ -14,7 +14,7 @@ myVideo.muted = true;
 // };
 
 var peer = new Peer(undefined, {
-    path: "/peerjs",
+    path: "https://vd-chat-v1-0.onrender.com/peerjs",
     host: "localhost" || "https://vd-chat-v1-0.onrender.com",
     port: "4040" || "",
 });
