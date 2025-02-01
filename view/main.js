@@ -15,7 +15,7 @@ myVideo.muted = true;
 
 var peer = new Peer(undefined, {
     path: "/peerjs",
-    host: "https://vd-chat-v1-0.onrender.com",
+    host: "localhost",
     port: "4040",
 });
 
